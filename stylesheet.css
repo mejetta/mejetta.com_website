@@ -3,4 +3,54 @@
   font-optical-sizing: auto;
 }
 
+.work-sans{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 
+
+
+body {
+    background-color: #ffeff2;
+    font-family: unbounded;
+    margin: 0;
+}
+
+.topnav {
+    background-color: #f5b6c3;
+    font-family: Work Sans;
+    color: #982d46;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.topnav .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.topnavName {
+    font-family: unbounded;
+    padding: .5em;
+    letter-spacing: .3em;
+    font-style: oblique;
+    font-weight: 900;
+}
+
+.links a {
+    color: #982d46;
+    padding: .5em;
+    text-decoration: none;
+}
+
+.links a:hover {
+    background-color: #9ebf5e;
+    color: #526d43;
+    font-family: unbounded;
+    font-size: smaller;
+}
