@@ -6,8 +6,6 @@
 .work-sans{
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
 }
 
 
@@ -16,7 +14,14 @@ body {
     background-color: #ffeff2;
     font-family: unbounded;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+    
+
 }
+
+
 
 .topnav {
     background-color: #f5b6c3;
@@ -27,6 +32,18 @@ body {
     justify-content: space-between;
     gap: 1em;
 }
+
+.bottomnav {
+    background-color: #f5b6c3;
+    font-family: Work Sans;
+    color: #982d46;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+
+}
+
 
 .topnav .links {
     display: flex;
@@ -54,3 +71,56 @@ body {
     font-family: unbounded;
     font-size: smaller;
 }
+
+.content {
+    /* background-color: rgb(226, 194, 194); */
+    height: 85vh;
+    width: 90%;
+    margin: 20px;
+    margin-bottom: 0;
+    align-self: center;
+    
+
+    background-image: url(css/assets/interpreterbg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    display: grid;
+    
+    
+    gap: 1em;
+    grid-template-areas: 
+    "box1 box1 box5 box2 box2"
+    "box1 box1 box5 box3 box3"
+    "box1 box1 box5 box4 box4" 
+    ;
+
+
+
+}
+
+.box {
+    background-color: rgb(79, 79, 163);
+}
+
+.pplDrawing {
+    /* background-color: red; */
+    background-image: url(css/assets/speechpeople.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+
+
+
+
+
+ @media only screen and (max-width: 110vh) {
+    body {
+        background-color: blue;
+    }
+    
+ }
