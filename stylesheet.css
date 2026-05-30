@@ -1,4 +1,8 @@
-
+.work-sans{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;;
+  font-style: normal;
+}
 
 body {
     background-color: #ffeff2;
@@ -45,6 +49,7 @@ body {
     color: #526d43;
     font-family: unbounded;
     font-size: smaller;
+    cursor: pointer;
 }
 
 
@@ -92,32 +97,156 @@ body {
 
 
     display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     
     
     gap: 1em;
     grid-template-areas: 
-    "box1 box1 box2 box2"
-    "box1 box1 box3 box3"
-    "box1 box1 box4 box4" 
+    "box1 box1 box2"
+    "box1 box1 box2"
+    "box1 box1 box3" 
     ;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr;
 }
 
-.box {
-    background-color: rgb(79, 79, 163);
+
+
+.box2 {
+    /* background-color: rgb(79, 79, 163); */
+    /* height: 30vh; */
 }
 
 .pplDrawing {
-    background-color: rgb(89, 144, 33);
-    /* background-image: url(css/assets/speechpeople.png); */
+    /* background-color: rgb(89, 144, 33); */
+    background-image: url(css/assets/interpreterbg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    gap: 1em;
+    grid-template-areas: 
+    "dBox1 dBox1"
+    "dBox3 dBox2"
+    ;
+}
+
+
+
+
+.drawingBox {
+    /* background-color: red; */
+}
+
+.pplDrawingBox {
+    /* background-color: purple; */
+    background-image: url(css/assets/speechpeople.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
 
+.box-form {
+    background-color: #eeb6c3;
+    /* background-color: red; */
+    border-radius: 2vh;
+    height: 40vh;
+    
+
+    
+    display: grid;
+
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.formDescription {
+    padding: 1vh;
+    margin: 1vh;
+    max-height: 65%;
+    background-color: #e0889d;
+    overflow-y:scroll;
+    border-radius: 1vh;
+    margin-bottom: -10px;
+    margin-top: -5px;
+
+    font-size: small;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.formDescription::-webkit-scrollbar {
+  display: none;
+}
 
 
 
+
+
+input[type=text], select { 
+    padding: .3vh; 
+    background-color: #ffeff2;
+    color: #982d46;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Work Sans;
+    margin-bottom: 1vh;
+    width: 100%;
+}
+input[type=email], select {
+    background-color: #ffeff2;
+    padding: .3vh;
+    border: .4vh solid #e692a5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Work Sans;
+    margin-bottom: 1vh;
+    width: 100%;
+}
+
+::placeholder {
+    color:#e0889d;
+    font-style: italic;
+}
+
+.form-control {
+    background-color: hsl(349, 100%, 97%);
+    /* color: #982d46; */
+    padding: .3vh;
+    border: .4vh solid #e692a5;
+    border-radius: 1vh;
+    box-sizing: border-box;
+    font-family: Work Sans;
+    outline: none;
+    width: 100%;
+
+}
+
+.formContainer {
+    background-color:#eeb6c3;
+    /* background-color: blue; */
+    border-radius: 3vh;
+    border: 5px solid #e0889d;
+    padding: 2vh;
+    margin: 1vh;
+}
+
+
+
+button[type=submit] {
+    color: #982d46;
+    background-color: #c3e187;
+    color: #526d43;
+    padding: 1vh;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Work Sans;
+    cursor: pointer;
+}
 
 
  @media only screen and (max-width: 110vh) {
