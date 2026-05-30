@@ -107,7 +107,7 @@ body {
 }
 
 .pplDrawing {
-    background-color: red;
+    background-color: rgb(89, 144, 33);
     /* background-image: url(css/assets/speechpeople.png); */
     background-size: contain;
     background-repeat: no-repeat;
