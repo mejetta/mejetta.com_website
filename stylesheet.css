@@ -1,0 +1,129 @@
+
+
+body {
+    background-color: #ffeff2;
+    font-family: unbounded;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    
+
+}
+
+
+
+.topnav {
+    background-color: #f5b6c3;
+    font-family: Work Sans;
+    color: #982d46;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+.topnav .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.topnavName {
+    font-family: unbounded;
+    padding: .5em;
+    letter-spacing: .3em;
+    font-style: oblique;
+    font-weight: 900;
+}
+.links a {
+    color: #982d46;
+    padding: .5em;
+    text-decoration: none;
+}
+.links a:hover {
+    background-color: #9ebf5e;
+    color: #526d43;
+    font-family: unbounded;
+    font-size: smaller;
+}
+
+
+
+.bottomnav {
+    background-color: #f5b6c3;
+    font-family: Work Sans;
+    color: #c05f75;
+    padding: 1.5vh;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    flex-wrap: nowrap;
+
+}
+.bottomnav a {
+    text-decoration: none;
+    color:#982d46;
+}
+.bottomnav a:hover {
+    color: #526d43;
+    background-color: #9ebf5e;
+}
+
+
+
+
+
+
+
+
+
+
+.content {
+    height: 85vh;
+    width: 90%;
+    margin: 10px;
+    align-self: center;
+    
+
+    /* background-image: url(css/assets/interpreterbg.png); */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    display: grid;
+    
+    
+    gap: 1em;
+    grid-template-areas: 
+    "box1 box1 box2 box2"
+    "box1 box1 box3 box3"
+    "box1 box1 box4 box4" 
+    ;
+}
+
+.box {
+    background-color: rgb(79, 79, 163);
+}
+
+.pplDrawing {
+    background-color: red;
+    /* background-image: url(css/assets/speechpeople.png); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+
+
+
+
+
+ @media only screen and (max-width: 110vh) {
+    body {
+        background-color: blue;
+    }
+    
+ }
+ 
