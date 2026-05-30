@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+
+
+    <link rel="stylesheet"  href="stylesheet.css" type="text/css">
+    <title>MEJETTA</title>
+</head>
+<body>
+
+
+<div class="topnav">
+    <div class="topnavName">MEJETTA</div>
+    <div class="links">
+        <a href="ekezdu.art">HOME</a>
+        <a href="ekezdu.art">ABOUT ME</a>
+        <a href="ekezdu.art">MY WORK</a>
+        <a href="ekezdu.art">FAQ</a>
+        <a href="ekezdu.art">CONTACT</a>
+    </div>
+
+</div>
+
+<div class="content">
+
+
+    <div class="pplDrawing" style="grid-area: box1;"></div>
+    <div class="box" style="grid-area: box2;"></div>
+    <div class="box" style="grid-area: box3;"></div>
+    <div class="box" style="grid-area: box4;"></div>
+    <div class="box" style="grid-area: box5;"></div>
+
+</div>
+
+<div class="bottomnav">
+    <div class="ekezduLink">Website created by <a href="ekezdu.art">ekezdu</a> ||</div>
+    <div class="translatorLink">Would you rather hire me as a translator? <a href=""></a> 
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+body {
+    background-color: #ffeff2;
+    font-family: unbounded;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    
+
+}
+
+
+
+.topnav {
+    background-color: #f5b6c3;
+    font-family: Work Sans;
+    color: #982d46;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+.topnav .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.topnavName {
+    font-family: unbounded;
+    padding: .5em;
+    letter-spacing: .3em;
+    font-style: oblique;
+    font-weight: 900;
+}
+.links a {
+    color: #982d46;
+    padding: .5em;
+    text-decoration: none;
+}
+.links a:hover {
+    background-color: #9ebf5e;
+    color: #526d43;
+    font-family: unbounded;
+    font-size: smaller;
+}
+
+
+
+.bottomnav {
+    background-color: #f5b6c3;
+    font-family: Work Sans;
+    color: #c05f75;
+    padding: 1.5vh;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    flex-wrap: nowrap;
+
+}
+.bottomnav a {
+    text-decoration: none;
+    color:#982d46;
+}
+.bottomnav a:hover {
+    color: #526d43;
+    background-color: #9ebf5e;
+}
+
+
+
+
+
+
+
+
+
+
+.content {
+    height: 85vh;
+    width: 90%;
+    margin: 20px;
+    margin-bottom: 0;
+    align-self: center;
+    
+
+    background-image: url(css/assets/interpreterbg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    display: grid;
+    
+    
+    gap: 1em;
+    grid-template-areas: 
+    "box1 box1 box5 box2 box2"
+    "box1 box1 box5 box3 box3"
+    "box1 box1 box5 box4 box4" 
+    ;
+}
+
+.box {
+    background-color: rgb(79, 79, 163);
+}
+
+.pplDrawing {
+    /* background-color: red; */
+    background-image: url(css/assets/speechpeople.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+
+
+
+
+
+ @media only screen and (max-width: 110vh) {
+    body {
+        background-color: blue;
+    }
+    
+ }
+ 
+
+
+
+
+
+
