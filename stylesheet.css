@@ -1,7 +1,8 @@
-.work-sans{
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;;
-  font-style: normal;
+.work-sans {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    ;
+    font-style: normal;
 }
 
 body {
@@ -11,39 +12,68 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    
-    
+    background-image: url(css/assets/graph.png);
+    background-size: contain;
+
+
 
 }
 
+.content {
+    /* PARENT */
+    height: 85vh;
+    width: 90%;
+    margin: 10px;
+    align-self: center;
+    /* GRID */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 1em;
+    grid-template-areas:
+        /* box1 is "pplDrawing - big left section, box2 is __ and box3 is the contact box*/
+        "box1 box1 box2"
+        "box1 box1 box2"
+        "box1 box1 box3"
+    ;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr;
+}
 
-
+/* #region TOPNAV */
 .topnav {
+    /*PARENT*/
     background-color: #f5b6c3;
     font-family: Work Sans;
     color: #982d46;
-    
+    /* FLEX  */
     display: flex;
     justify-content: space-between;
     gap: 1em;
 }
+
 .topnav .links {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
 }
+
 .topnavName {
+    /*MEJETTA on topnav*/
     font-family: unbounded;
     padding: .5em;
     letter-spacing: .3em;
     font-style: oblique;
     font-weight: 900;
 }
+
 .links a {
+    /* home about me my work faq contact*/
     color: #982d46;
     padding: .5em;
     text-decoration: none;
 }
+
 .links a:hover {
     background-color: #9ebf5e;
     color: #526d43;
@@ -52,118 +82,111 @@ body {
     cursor: pointer;
 }
 
+/* #endregion */
 
 
+/* #region BOTTOMNAV */
 .bottomnav {
+    /* PARENT */
     background-color: #f5b6c3;
     font-family: Work Sans;
     color: #c05f75;
     padding: 1.5vh;
-    
+    /* FLEX*/
     display: flex;
     justify-content: space-between;
     gap: 1em;
     flex-wrap: nowrap;
 
 }
+
 .bottomnav a {
     text-decoration: none;
-    color:#982d46;
+    color: #982d46;
 }
+
 .bottomnav a:hover {
     color: #526d43;
     background-color: #9ebf5e;
 }
 
-
-
-
-
-
-
-
-
-
-.content {
-    height: 85vh;
-    width: 90%;
-    margin: 10px;
-    align-self: center;
-    
-
-    /* background-image: url(css/assets/interpreterbg.png); */
-    background-size: contain;
-    background-repeat: no-repeat;
-
-
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    
-    
-    gap: 1em;
-    grid-template-areas: 
-    "box1 box1 box2"
-    "box1 box1 box2"
-    "box1 box1 box3" 
-    ;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr 1fr;
-}
-
+/* #endregion */
 
 
 .box2 {
-    /* background-color: rgb(79, 79, 163); */
+    /*CURRENTLY FILLER*/
+    background-color: rgb(79, 79, 163);
     /* height: 30vh; */
 }
 
-.pplDrawing {
-    /* background-color: rgb(89, 144, 33); */
-    background-image: url(css/assets/interpreterbg.png);
+
+.mainLeftSection {
+    /*PARENT*/
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     display: grid;
     gap: 1em;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "dBox1 dBox1"
-    "dBox3 dBox2"
+    grid-template-areas:
+        /*dBox1 is mainLeftTop dBox3 is pplDrawing and dBox2 is ___*/
+        "dBox1 dBox1"
+        "dBox3 dBox2"
     ;
 }
 
-
-
-.drawingBoxTop {
-    background-color: red;
+/* #region TOP LEFT SECTION */
+.mainLeftTop {
+    /* PARENT */
+    /* BACKROUND  */
+    /* background-color: rgb(246, 40, 81); */
+    background-image: url(css/assets/rippedPaperLong.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* GRID  */
     overflow: hidden;
     display: grid;
     justify-items: center;
     align-items: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    /* border-radius: 2vh; */
 }
+
 .topDescription {
-    max-height: 90%;
-    max-width: 80%;
-    background-color: aliceblue;
+    /* CHILD */
+    /* TEXT  */
+    color: #982d46;
+    text-shadow: -2px -2px 0 #f5b6c3, 2px -2px 0 #f5b6c3, -2px 2px 0 #f5b6c3, 2px 2px 0 #f5b6c3;
+    /* TEXT BORDER */
+
+    max-height: 75%;
+    max-width: 75%;
+    margin: 0;
+    border-radius: 2vh;
+    padding: 2%;
+    /* background-color: rgb(218, 109, 131, 50%); */
+
     overflow: scroll;
     overflow-x: hidden;
-    margin: 0;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    padding: 20px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
-
+/* #endregion */
 
 
 .drawingBoxR {
+    /*CURRENTLY FILLER*/
     background-color: rgb(244, 67, 149);
 }
 
 
-
 .pplDrawingBox {
+    /* GRAPHIC IN BOTTOM LEFT */
     /* background-color: purple; */
     background-image: url(css/assets/speechpeople.png);
     background-size: contain;
@@ -172,46 +195,50 @@ body {
 }
 
 
-.box-form {
+
+/* #region CONTACT FORM - to organize further, unsure of what each section does */
+.box-form { /* MAIN BODY OF FORM*/
     background-color: #eeb6c3;
     /* background-color: red; */
     border-radius: 2vh;
     height: 40vh;
-    
-
-    
+    /* GRID  */
     display: grid;
-
     justify-content: center;
     align-items: center;
     padding: 0;
 }
 
-.formDescription {
+.formDescription { /* TOP HALF - DESC */
     padding: 1vh;
     margin: 1vh;
     max-height: 65%;
     background-color: #e0889d;
-    overflow-y:scroll;
     border-radius: 1vh;
     margin-bottom: -10px;
     margin-top: -5px;
 
+    /* TEXT  */
     font-size: small;
+    color: #982d46;
 
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    /* SCROLLING  */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;    
 }
+
 .formDescription::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 
 
 
 
-input[type=text], select { 
-    padding: .3vh; 
+input[type=text],
+select {
+    padding: .3vh;
     background-color: #ffeff2;
     color: #982d46;
     border-radius: 4px;
@@ -220,7 +247,9 @@ input[type=text], select {
     margin-bottom: 1vh;
     width: 100%;
 }
-input[type=email], select {
+
+input[type=email],
+select {
     background-color: #ffeff2;
     padding: .3vh;
     border: .4vh solid #e692a5;
@@ -232,7 +261,7 @@ input[type=email], select {
 }
 
 ::placeholder {
-    color:#e0889d;
+    color: #e0889d;
     font-style: italic;
 }
 
@@ -250,7 +279,7 @@ input[type=email], select {
 }
 
 .formContainer {
-    background-color:#eeb6c3;
+    background-color: #eeb6c3;
     /* background-color: blue; */
     border-radius: 3vh;
     border: 5px solid #e0889d;
@@ -272,11 +301,18 @@ button[type=submit] {
     cursor: pointer;
 }
 
+button[type=submit]:hover {
+    background-color: #9ebf5e;
+    color: #3c562f;
+    font-family: unbounded;
+}
 
- @media only screen and (max-width: 110vh) {
+/* #endregion */
+
+
+@media only screen and (max-width: 110vh) {
     body {
         background-color: blue;
     }
-    
- }
- 
+
+}
