@@ -126,6 +126,7 @@ body {
     background-position: center;
     display: grid;
     gap: 1em;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "dBox1 dBox1"
     "dBox3 dBox2"
@@ -134,10 +135,33 @@ body {
 
 
 
-
-.drawingBox {
+.drawingBoxTop {
     background-color: red;
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
+.topDescription {
+    max-height: 90%;
+    max-width: 80%;
+    background-color: aliceblue;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    padding: 20px;
+}
+
+
+
+
+.drawingBoxR {
+    background-color: rgb(244, 67, 149);
+}
+
+
 
 .pplDrawingBox {
     /* background-color: purple; */
