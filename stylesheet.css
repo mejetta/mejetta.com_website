@@ -128,6 +128,7 @@ body {
     display: grid;
     gap: 1em;
     grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         /*dBox1 is mainLeftTop dBox3 is pplDrawing and dBox2 is ___*/
         "dBox1 dBox1"
@@ -136,8 +137,7 @@ body {
 }
 
 /* #region TOP LEFT SECTION */
-.mainLeftTop {
-    /* PARENT */
+.mainLeftTop {    /* PARENT */
     /* BACKROUND  */
     /* background-color: rgb(246, 40, 81); */
     background-image: url(css/assets/rippedPaperLong.png);
@@ -181,17 +181,54 @@ body {
 
 .drawingBoxR {
     /*CURRENTLY FILLER*/
-    background-color: rgb(244, 67, 149);
+    /* background-color: rgb(244, 67, 149); */
+    background-image: url(css/assets/rippedPaperShort.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* GRID  */
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 5%;
+}
+
+.drawingboxR_desc {
+    /* CHILD */
+    /* TEXT  */
+    color: #982d46;
+    text-shadow: -2px -2px 0 #f5b6c3, 2px -2px 0 #f5b6c3, -2px 2px 0 #f5b6c3, 2px 2px 0 #f5b6c3;
+    /* TEXT BORDER */
+
+    max-height: 75%;
+    max-width: 75%;
+    margin: 0;
+    border-radius: 2vh;
+    padding: 2%;
+    /* background-color: rgb(218, 109, 131, 50%); */
+
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
 }
 
 
-.pplDrawingBox {
-    /* GRAPHIC IN BOTTOM LEFT */
+.pplDrawingBox { /* GRAPHIC IN BOTTOM LEFT */
+    
     /* background-color: purple; */
     background-image: url(css/assets/speechpeople.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+
+    min-width: 30vh;
 }
 
 
