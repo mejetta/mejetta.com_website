@@ -196,7 +196,7 @@ body {
 
 
 
-/* #region CONTACT FORM - to organize further, unsure of what each section does */
+/* #region CONTACT FORM  */
 .box-form { /* MAIN BODY OF FORM*/
     background-color: #eeb6c3;
     /* background-color: red; */
@@ -236,7 +236,7 @@ body {
 
 
 
-input[type=text],
+input[type=text], /* SETTINGS FOR Y/N  */
 select {
     padding: .3vh;
     background-color: #ffeff2;
@@ -249,7 +249,7 @@ select {
 }
 
 input[type=email],
-select {
+select { /* SETTINGS FOR EMAIL TXT BOX */ 
     background-color: #ffeff2;
     padding: .3vh;
     border: .4vh solid #e692a5;
@@ -260,14 +260,14 @@ select {
     width: 100%;
 }
 
-::placeholder {
-    color: #e0889d;
+::placeholder { /* SETTINGS FOR TXT BOXES BEFORE INPUT */
+    color: #e0889d; 
     font-style: italic;
 }
 
 .form-control {
     background-color: hsl(349, 100%, 97%);
-    /* color: #982d46; */
+    color: #982d46; /*CHANGES INPUTED TXT COLOR IN TXT BOXES*/ 
     padding: .3vh;
     border: .4vh solid #e692a5;
     border-radius: 1vh;
@@ -278,18 +278,18 @@ select {
 
 }
 
-.formContainer {
+.formContainer { /* FORM SETTINGS */
     background-color: #eeb6c3;
     /* background-color: blue; */
     border-radius: 3vh;
-    border: 5px solid #e0889d;
+    /* border: 5px solid #e0889d; */
     padding: 2vh;
     margin: 1vh;
 }
 
 
 
-button[type=submit] {
+button[type=submit] { /* SUBMIT FORM BUTTON */ 
     color: #982d46;
     background-color: #c3e187;
     color: #526d43;
@@ -301,7 +301,7 @@ button[type=submit] {
     cursor: pointer;
 }
 
-button[type=submit]:hover {
+button[type=submit]:hover { /* HOVERING OVER SUBMIT BUTTON */
     background-color: #9ebf5e;
     color: #3c562f;
     font-family: unbounded;
