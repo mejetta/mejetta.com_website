@@ -19,6 +19,10 @@ body {
 
 }
 
+
+
+/* #region DESKTOP */
+
 .content {
     /* PARENT */
     height: 85vh;
@@ -27,20 +31,26 @@ body {
     align-self: center;
     /* GRID */
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
     gap: 1em;
     grid-template-areas:
         /* box1 is "pplDrawing - big left section, box2 is __ and box3 is the contact box*/
         "box1 box1 box2"
-        "box1 box1 box2"
+        "box1 box1 box3"
         "box1 box1 box3"
     ;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 2fr 2fr 1fr;
 }
 
+.box2 {
+    background-color: aliceblue;
+}
+
 /* #region TOPNAV */
+.navbar {
+    display: none;
+}
+
 .topnav {
     /*PARENT*/
     background-color: #f5b6c3;
@@ -84,7 +94,6 @@ body {
 
 /* #endregion */
 
-
 /* #region BOTTOMNAV */
 .bottomnav {
     /* PARENT */
@@ -113,11 +122,6 @@ body {
 /* #endregion */
 
 
-.box2 {
-    /*CURRENTLY FILLER*/
-    background-color: rgb(79, 79, 163);
-    /* height: 30vh; */
-}
 
 
 .mainLeftSection {
@@ -125,10 +129,13 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #9ebf5e;
+
+    /* GRID  */
     display: grid;
     gap: 1em;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-template-areas:
         /*dBox1 is mainLeftTop dBox3 is pplDrawing and dBox2 is ___*/
         "dBox1 dBox1"
@@ -137,9 +144,10 @@ body {
 }
 
 /* #region TOP LEFT SECTION */
-.mainLeftTop {    /* PARENT */
+.mainLeftTop {
+    /* PARENT */
     /* BACKROUND  */
-    /* background-color: rgb(246, 40, 81); */
+    background-color: rgb(246, 40, 81);
     background-image: url(css/assets/rippedPaperLong.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -160,13 +168,15 @@ body {
     color: #982d46;
     text-shadow: -2px -2px 0 #f5b6c3, 2px -2px 0 #f5b6c3, -2px 2px 0 #f5b6c3, 2px 2px 0 #f5b6c3;
     /* TEXT BORDER */
+    /* font-size: 1.2vh; */
+
 
     max-height: 75%;
     max-width: 75%;
     margin: 0;
     border-radius: 2vh;
     padding: 2%;
-    /* background-color: rgb(218, 109, 131, 50%); */
+    background-color: rgb(218, 109, 131, 50%);
 
     overflow: scroll;
     overflow-x: hidden;
@@ -181,7 +191,7 @@ body {
 
 .drawingBoxR {
     /*CURRENTLY FILLER*/
-    /* background-color: rgb(244, 67, 149); */
+    background-color: rgb(244, 67, 149);
     background-image: url(css/assets/rippedPaperShort.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -201,14 +211,16 @@ body {
     /* TEXT  */
     color: #982d46;
     text-shadow: -2px -2px 0 #f5b6c3, 2px -2px 0 #f5b6c3, -2px 2px 0 #f5b6c3, 2px 2px 0 #f5b6c3;
+    font-size: smaller;
     /* TEXT BORDER */
 
+
     max-height: 75%;
-    max-width: 75%;
+    max-width: 70%;
     margin: 0;
     border-radius: 2vh;
     padding: 2%;
-    /* background-color: rgb(218, 109, 131, 50%); */
+    background-color: rgb(218, 109, 131, 50%);
 
     overflow: scroll;
     overflow-x: hidden;
@@ -220,9 +232,10 @@ body {
 }
 
 
-.pplDrawingBox { /* GRAPHIC IN BOTTOM LEFT */
-    
-    /* background-color: purple; */
+.pplDrawingBox {
+    /* GRAPHIC IN BOTTOM LEFT */
+
+    background-color: purple;
     background-image: url(css/assets/speechpeople.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -232,13 +245,13 @@ body {
 }
 
 
-
 /* #region CONTACT FORM  */
-.box-form { /* MAIN BODY OF FORM*/
+.box-form {
+    /* MAIN BODY OF FORM*/
     background-color: #eeb6c3;
     /* background-color: red; */
     border-radius: 2vh;
-    height: 40vh;
+    /* height: 40vh; */
     /* GRID  */
     display: grid;
     justify-content: center;
@@ -246,14 +259,15 @@ body {
     padding: 0;
 }
 
-.formDescription { /* TOP HALF - DESC */
+.formDescription {
+    /* TOP HALF - DESC */
     padding: 1vh;
     margin: 1vh;
-    max-height: 65%;
+    max-height: 80%;
     background-color: #e0889d;
     border-radius: 1vh;
     margin-bottom: -10px;
-    margin-top: -5px;
+    /* margin-top: -5px; */
 
     /* TEXT  */
     font-size: small;
@@ -262,7 +276,7 @@ body {
     /* SCROLLING  */
     -ms-overflow-style: none;
     scrollbar-width: none;
-    overflow-y: scroll;    
+    overflow-y: scroll;
 }
 
 .formDescription::-webkit-scrollbar {
@@ -273,9 +287,10 @@ body {
 
 
 
-input[type=text], /* SETTINGS FOR Y/N  */
+input[type=text],
+/* SETTINGS FOR Y/N  */
 select {
-    padding: .3vh;
+    padding: 1vh;
     background-color: #ffeff2;
     color: #982d46;
     border-radius: 4px;
@@ -286,9 +301,10 @@ select {
 }
 
 input[type=email],
-select { /* SETTINGS FOR EMAIL TXT BOX */ 
+select {
+    /* SETTINGS FOR EMAIL TXT BOX */
     background-color: #ffeff2;
-    padding: .3vh;
+    padding: 1vh;
     border: .4vh solid #e692a5;
     border-radius: 4px;
     box-sizing: border-box;
@@ -297,15 +313,17 @@ select { /* SETTINGS FOR EMAIL TXT BOX */
     width: 100%;
 }
 
-::placeholder { /* SETTINGS FOR TXT BOXES BEFORE INPUT */
-    color: #e0889d; 
+::placeholder {
+    /* SETTINGS FOR TXT BOXES BEFORE INPUT */
+    color: #e0889d;
     font-style: italic;
 }
 
 .form-control {
     background-color: hsl(349, 100%, 97%);
-    color: #982d46; /*CHANGES INPUTED TXT COLOR IN TXT BOXES*/ 
-    padding: .3vh;
+    color: #982d46;
+    /*CHANGES INPUTED TXT COLOR IN TXT BOXES*/
+    padding: 1vh;
     border: .4vh solid #e692a5;
     border-radius: 1vh;
     box-sizing: border-box;
@@ -315,7 +333,8 @@ select { /* SETTINGS FOR EMAIL TXT BOX */
 
 }
 
-.formContainer { /* FORM SETTINGS */
+.formContainer {
+    /* FORM SETTINGS */
     background-color: #eeb6c3;
     /* background-color: blue; */
     border-radius: 3vh;
@@ -326,7 +345,8 @@ select { /* SETTINGS FOR EMAIL TXT BOX */
 
 
 
-button[type=submit] { /* SUBMIT FORM BUTTON */ 
+button[type=submit] {
+    /* SUBMIT FORM BUTTON */
     color: #982d46;
     background-color: #c3e187;
     color: #526d43;
@@ -338,7 +358,8 @@ button[type=submit] { /* SUBMIT FORM BUTTON */
     cursor: pointer;
 }
 
-button[type=submit]:hover { /* HOVERING OVER SUBMIT BUTTON */
+button[type=submit]:hover {
+    /* HOVERING OVER SUBMIT BUTTON */
     background-color: #9ebf5e;
     color: #3c562f;
     font-family: unbounded;
@@ -346,10 +367,180 @@ button[type=submit]:hover { /* HOVERING OVER SUBMIT BUTTON */
 
 /* #endregion */
 
+/* #endregion */
 
-@media only screen and (max-width: 110vh) {
+
+
+@media only screen and (max-width: 135vh) {
     body {
         background-color: blue;
+        background-image: none;
+        overflow: auto;
     }
+    .topnav {
+        display: none;
+    }
+
+    .content {
+
+        height: auto;
+        grid-template-areas:
+            /* box1 is "pplDrawing - big left section, box2 is __ and box3 is the contact box*/
+            "box1 box1"
+            "box1 box1"
+            "box1 box1"
+            "box3 box3"
+            "box2 box2"
+        ;
+        grid-template-columns: 0;
+        grid-template-rows: 2fr 1fr;
+
+    }
+
+
+    .mainLeftSection {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            /*dBox1 is mainLeftTop dBox3 is pplDrawing and dBox2 is ___*/
+            "dBox1"
+            "dBox1"
+            "dBox3"
+            "dBox3"
+            "dBox2"
+        ;
+        gap: 0;
+        height: fit-content;
+    }
+
+    .mainLeftTop {
+        /* background-color: none; */
+        /* background-image: url(css/assets/rippedPaperSquare.png); */
+        height: fit-content;
+    }
+
+    .drawingBoxR {
+        height: fit-content;
+        background-image: url(css/assets/notebookLong.png);
+    }
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+}
+
+
+@media only screen and (max-width: 70vh) {
+    body {
+        background-color: rgb(182, 182, 221);
+        background-image: none;
+        overflow: auto;
+    }
+
+    .content {
+
+        height: auto;
+        grid-template-areas:
+            /* box1 is "pplDrawing - big left section, box2 is __ and box3 is the contact box*/
+            "box1 box1"
+            "box1 box1"
+            "box1 box1"
+            "box3 box3"
+            "box2 box2"
+        ;
+        grid-template-columns: 0;
+        grid-template-rows: 2fr 1fr;
+
+    }
+
+
+    .mainLeftSection {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            /*dBox1 is mainLeftTop dBox3 is pplDrawing and dBox2 is ___*/
+            "dBox1"
+            "dBox1"
+            "dBox3"
+            "dBox3"
+            "dBox2"
+        ;
+        gap: 0;
+        height: fit-content;
+    }
+
+    .mainLeftTop {
+        /* background-color: none; */
+        background-image: url(css/assets/rippedPaperSquare2.png);
+        height: fit-content;
+    }
+
+    .drawingBoxR {
+        height: fit-content;
+        background-image: url(css/assets/notebookSquare.png);
+    }
+
+
 
 }

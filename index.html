@@ -27,6 +27,21 @@
     </div>
 
 </div>
+<div class="navbar">
+
+  <a href="#news" class="topnavName">MEJETTA</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Dropdown
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+        <a href="ekezdu.art">ABOUT ME</a>
+        <a href="ekezdu.art">MY WORK</a>
+        <a href="ekezdu.art">FAQ</a>
+        <a href="ekezdu.art">CONTACT</a>
+  </div>
+  </div> 
+</div>
 
 <div class="content">
 
@@ -35,6 +50,7 @@
       <div class="mainLeftTop" style="grid-area: dBox1">
         <div class="topDescription">
           This website is under construction!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolorem iste dolores quo labore eligendi. Odit quasi magnam pariatur aliquam molestiae rerum voluptate! Perspiciatis illo, dolor facilis porro dolorem cupiditate.
         </div>
 
       </div>
@@ -93,7 +109,23 @@
 </div>
 
 
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
 
 
 
